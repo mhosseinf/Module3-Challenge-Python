@@ -29,3 +29,14 @@ for candidate, count in vote_counts.items():
           Winner=candidate
           Winner_count=count
 print(f"Winner: {Winner}")
+file_path2 = os.path.join("..","GitHub","Module3-Challenge-Python","Results","PyPoll-Outputs","PyPollresults.txt")
+Poll_result = list(("Election Results","----------------------------",f"Total Votes: {total_lines}","----------------------------"))
+winner_result = list(("----------------------------",f"Winner: {Winner}","----------------------------"))
+with open(file_path2, 'w') as file:
+        for item in Poll_result:
+            file.write(str(item) + '\n')
+        for candidate, count in vote_counts.items():
+            vote_percent=float(count/total_lines)
+            file.write(f"{candidate}: {round((vote_percent)*100,3)}% ({count})  votes"+'\n')
+        for item in winner_result:
+            file.write(str(item) + '\n')
