@@ -2,6 +2,7 @@ import os
 import csv
 from collections import defaultdict
 vote_counts = defaultdict(int)
+Winner_count=0
 file_path = os.path.join("..","GitHub","Module3-Challenge-Python","PyPoll","Resources","election_data.csv")
 with open(file_path, 'r', newline='') as csvfile:
     csv_reader = csv.reader(csvfile)
@@ -23,3 +24,8 @@ print("Vote counts for each candidate:")
 for candidate, count in vote_counts.items():
     vote_percent=float(count/total_lines)
     print(f"{candidate}: {round((vote_percent)*100,3)}% ({count})  votes")
+for candidate, count in vote_counts.items():
+    if count>Winner_count:
+          Winner=candidate
+          Winner_count=count
+print(f"Winner: {Winner}")
