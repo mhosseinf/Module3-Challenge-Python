@@ -2,7 +2,7 @@ import os
 import csv
 sum_column_2 = 0
 file_path = os.path.join("..","GitHub","Module3-Challenge-Python","Pybank","Resources","budget_data.csv")
-previous_value = None
+previous_value = 0
 change_sum = 0
 count = 0
 greatest_change=0
@@ -17,14 +17,14 @@ with open(file_path, 'r', newline='') as csvfile:
         column_2_Value=int(row[1])
         sum_column_2+=column_2_Value
         # print(row[1])
-        if previous_value is not None:
+        if previous_value is not 0:
             change_sum += column_2_Value - previous_value
             count+=1
             # print(change_sum)
             # print(column_2_Value)
-            current_change = change_sum       
-            if current_change > greatest_change:
-                greatest_change = current_change
+        current_change = column_2_Value - previous_value
+        if current_change > greatest_change:
+            greatest_change = current_change
         previous_value = column_2_Value
 if count>0:
     average_change=change_sum/count
