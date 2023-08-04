@@ -25,6 +25,7 @@ with open(file_path, 'r', newline='') as csvfile:
         current_change = column_2_Value - previous_value
         if current_change > greatest_change:
             greatest_change = current_change
+            greatest_change_month=row[0]
         previous_value = column_2_Value
 if count>0:
     average_change=change_sum/count
@@ -35,4 +36,4 @@ else:
 print("Total number of lines in the CSV file:", total_lines)
 print("Net total amount of Profit/Losses is:", sum_column_2)
 print("changes in Profit/Losses over the entire period:", average_change)
-print("Greatest Increase in Profits:", greatest_change)
+print(f"Greatest Increase in Profits: {greatest_change_month} {greatest_change}")
