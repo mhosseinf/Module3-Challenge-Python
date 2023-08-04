@@ -38,21 +38,15 @@ if count>0:
 else:
     average_change=0
         
-
+print("Financial Analysis")
+print("----------------------------")
 print("Total number of lines in the CSV file:", total_lines)
 print("Net total amount of Profit/Losses is:", sum_column_2)
 print("changes in Profit/Losses over the entire period:", round(average_change,2))
 print(f"Greatest Increase in Profits: {greatest_Increase_month} {greatest_Increase}")
 print(f"Greatest Decrease in Profits: {greatest_Decrease_month} {greatest_Decrease}")
-result_dict = {
-    f"Total number of lines in the CSV file: {total_lines}":total_lines,
-    f"Net total amount of Profit/Losses is:${sum_column_2}":sum_column_2,
-    f"changes in Profit/Losses over the entire period: ${round(average_change,2)}":average_change,
-    f"Greatest Increase in Profits: {greatest_Increase_month}: ${greatest_Increase}":greatest_Increase,
-    f"Greatest Decrease in Profits: {greatest_Decrease_month}: ${greatest_Decrease}":greatest_Decrease
-}
-
+result = list(("Financial Analysis","----------------------------",f"Total number of lines in the CSV file: {total_lines}",f"Net total amount of Profit/Losses is:${sum_column_2}",f"changes in Profit/Losses over the entire period: ${round(average_change,2)}",f"Greatest Increase in Profits: {greatest_Increase_month}: ${greatest_Increase}",f"Greatest Decrease in Profits: {greatest_Decrease_month}: ${greatest_Decrease}"))
 file_path2 = os.path.join("..","GitHub","Module3-Challenge-Python","Results","PyBank-Outputs","PyBankresults.txt")
 with open(file_path2, 'w') as file:
-    for result in result_dict:
-        file.write(result + '\n')
+    for item in result:
+        file.write(str(item) + '\n')
