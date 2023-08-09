@@ -10,5 +10,5 @@
 2-PyPoll-Outputs folder contains a text file that has the results from the Python script.
 
 
-#I created a folder named "Results/PyPoll-Outputs" to store the initial results. However, I decided not to delete this folder after rearranging the files. even after I moved all the result files to the same folder where the dataset is located to preserve the history of commits, allowing me to showcase the chronological evolution of the scripts and the step-by-step improvements made to each script within the same folder. This approach ensures that I can effectively demonstrate the historical changes, script enhancements, and iterative development process throughout the project.
+#I created a folder named "Results/PyPoll-Outputs" to store the initial results. However, I realised that results need to be located in the same folder where the dataset is located, so I rearrange the files and move scripts for both PayBank and PyPoll into the same folder. I feel like this action deleted the history of the evolution of the scripts and the step-by-step improvements made to each script.
 
