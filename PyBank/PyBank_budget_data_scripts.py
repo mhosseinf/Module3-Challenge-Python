@@ -1,7 +1,7 @@
 import os
 import csv
 sum_column_2 = 0
-file_path = os.path.join("..","GitHub","Module3-Challenge-Python","Pybank","Resources","budget_data.csv")
+file_path = os.path.join("Resources","budget_data.csv")
 previous_value = 0
 change_sum = 0
 count = 0
@@ -46,7 +46,7 @@ print("changes in Profit/Losses over the entire period:", round(average_change,2
 print(f"Greatest Increase in Profits: {greatest_Increase_month} {greatest_Increase}")
 print(f"Greatest Decrease in Profits: {greatest_Decrease_month} {greatest_Decrease}")
 result = list(("Financial Analysis","----------------------------",f"Total number of lines in the CSV file: {total_lines}",f"Net total amount of Profit/Losses is:${sum_column_2}",f"changes in Profit/Losses over the entire period: ${round(average_change,2)}",f"Greatest Increase in Profits: {greatest_Increase_month}: ${greatest_Increase}",f"Greatest Decrease in Profits: {greatest_Decrease_month}: ${greatest_Decrease}"))
-file_path2 = os.path.join("..","GitHub","Module3-Challenge-Python","Results","PyBank-Outputs","PyBankresults.txt")
+file_path2 = os.path.join("PyBank-Outputs","PyBankresults.txt")
 with open(file_path2, 'w') as file:
     for item in result:
         file.write(str(item) + '\n')
