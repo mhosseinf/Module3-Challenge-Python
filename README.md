@@ -24,3 +24,19 @@ then open the file as a CSV file and read it.
 
 4- the last part of the script prints the results in terminal
 5-Also, export a text file with the results.
+
+
+
+#PyPoll Scripts structure:
+It reads the financial data from a CSV file. Used the os. path.join() function to handle file paths
+then open the file as a CSV file and read it. 
+1-len() function used to count the Total Votes included in the dataset
+2-Created int dictionary named vote_counts.
+3-in a for loop, check all the values in column 3 and assign them to a variable called candidate (line candidate = row[2]): then vote_counts[candidate] += 1: updates the vote_counts dictionary. as candidate is already a key, it increments the value by 1, effectively counting the number of votes for each candidate.
+
+4-the following for loop will convert count into percent.
+
+5-the final for loop will check all the key and associated values in the vote_counts dictionary and find the winner using a new variant called the winner and winner_count
+
+6-the last part of the script prints the results in terminal
+7-Also, export a text file with the results.
