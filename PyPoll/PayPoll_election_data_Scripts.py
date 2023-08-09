@@ -13,7 +13,7 @@ with open(file_path, 'r', newline='') as csvfile:
     next(csv_reader)
 
     for row in csv_reader:
-            candidate = row[2]  # Assuming Candidate is at index 1 (0-indexed)
+            candidate = row[2]  # Candidate is at index 1 (0-indexed)
 
             # Update the vote count for the candidate
             vote_counts[candidate] += 1
